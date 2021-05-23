@@ -10,11 +10,12 @@
     justify-content: center;
     align-items: center;
     color:white;
+    cursor: pointer;
 }
 
 .button--secondary {
     background: #EDEDED;
-    color:black;
+    color: #A3A3A3;
 }
 
 .button--coin {

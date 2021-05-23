@@ -6,8 +6,10 @@ import './Filters.css';
 export default function Filters() {
     return (
         <div className="filters">
-            <Label />
-            <Sorter />
+            <div className="filters--left">
+                <Label />
+                <Sorter />
+            </div>
             <Pager />
         </div>
     );

@@ -1,6 +1,7 @@
 .banner {
     width:100%;
     position: relative;
+    background-color: #F2F2F2;
 }
 
 .banner--img {
@@ -10,7 +11,8 @@
 .banner--text {
     position: absolute;
     bottom: 40px;
-    left: 5%;
+    left: 15%;
     color:white;
     font-size: 64px;
+    font-weight: bold;
 }

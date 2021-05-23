@@ -3,7 +3,9 @@ import './Sorter.css';
 
 export default function Sorter() {
     return (
-        <div>
+        <div className="sorter">
+            <div className="sorter--separator"></div>
+            <p className="sorter--title">Sort by:</p>
             <div className="sorter--button">
                 <Button />
                 <Button type="secondary" />

@@ -9,13 +9,11 @@ export default function Button(props) {
     }
 
     return (
-        <div>
-            <button className={buttonClass}>
-                6000
-                {props.showCoin ? (
-                    <img className="button--coin" src={coin} alt="coin"></img>
-                ) : null}
-            </button>
-        </div>
+        <button className={buttonClass}>
+            6000
+            {props.showCoin ? (
+                <img className="button--coin" src={coin} alt="coin"></img>
+            ) : null}
+        </button>
     );
 }
