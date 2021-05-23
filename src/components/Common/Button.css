@@ -1,0 +1,23 @@
+.button {
+    
+    background: #0AD4FA;
+    border-radius: 20.5px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.button--secondary {
+    background: #EDEDED;
+    color:black;
+}
+
+.button--coin {
+    width: 24px;
+    padding-left: 5px;
+}

@@ -1,5 +1,5 @@
-import "./Banner.css";
-import bannerImg from "../images/header-x1.png";
+import './Banner.css';
+import bannerImg from '../../images/header-x1.png';
 
 export default function Banner() {
   return (
