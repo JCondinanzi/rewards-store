@@ -1,14 +1,24 @@
-
-
 .card {
-    width: 30%;
+    position: relative;
+    width:25%;
+    padding: 20px 30px;
+    
+}
+
+.card--content {
     background-color:#FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; 
     padding: 20px 30px;
+    
+}
+
+.card--buy-blue {
+    width:42px;
+    align-self: flex-end;
+    
 }
 
 .card--separator {
@@ -29,4 +39,52 @@
 line-height: 23px;
 letter-spacing:0.5px;
 color: #616161;
+}
+
+.card--hover {
+    background-color: #0ad2fad3;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 82%;
+    height: 90%;
+    margin: 20px 30px;
+}
+
+.card--hover-price {
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.card--hover-buy-white {
+    width: 47px;
+    align-self: flex-end;
+    margin:20px 25px 0 0;
+}
+
+.card--hover-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card--hover-coin {
+    margin-left: 10px;
+}
+
+.card--hover-button {
+    width: 187px;
+    background-color: white;
+    color: #616161;
+    border-radius: 20.5px;
+    border:none;
+    height: 42px;
+ font-size: 18px;
+
+}
+
+.hidden {
+    visibility: hidden;
 }

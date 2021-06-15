@@ -19,7 +19,7 @@ export default function Content() {
         });
     return (
         <div className="content">
-            <Filters />
+            <Filters productsAmount={products.length} />
             <Results products={products} />
         </div>
     );
