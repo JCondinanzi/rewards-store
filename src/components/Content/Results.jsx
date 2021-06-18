@@ -11,6 +11,8 @@ export default function Results(props) {
                         name={item.name}
                         category={item.category}
                         cost={item.cost}
+                        id={item._id}
+                        onRedeem={props.onRedeem}
                     />
                 );
             })}

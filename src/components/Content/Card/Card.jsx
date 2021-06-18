@@ -10,6 +10,9 @@ export default function Card(props) {
     let mouseHover = () => {
         setHover(!hover);
     };
+    let onClick = () => {
+        props.onRedeem(props.id);
+    };
     return (
         <div
             className="card"
@@ -26,10 +29,12 @@ export default function Card(props) {
             <div className={'card--hover ' + (hover ? '' : 'hidden')}>
                 <img className="card--hover-buy-white" src={buyWhite}></img>
                 <div className="card--hover-content">
-                    <span className="card--hover-price">$12.000</span>
+                    <span className="card--hover-price">{props.cost}</span>
                     <img className="card--hover-coin" src={coin}></img>
                 </div>
-                <button className="card--hover-button">Redeem now</button>
+                <button className="card--hover-button" onClick={onClick}>
+                    Redeem now
+                </button>
             </div>
         </div>
     );

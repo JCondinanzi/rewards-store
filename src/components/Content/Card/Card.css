@@ -51,11 +51,13 @@ color: #616161;
     width: 82%;
     height: 90%;
     margin: 20px 30px;
+    
 }
 
 .card--hover-price {
     font-size: 36px;
     color: #FFFFFF;
+    margin-top: 50px;
 }
 
 .card--hover-buy-white {
@@ -72,6 +74,7 @@ color: #616161;
 
 .card--hover-coin {
     margin-left: 10px;
+    margin-top: 50px;
 }
 
 .card--hover-button {
@@ -82,6 +85,8 @@ color: #616161;
     border:none;
     height: 42px;
  font-size: 18px;
+ align-self: center;
+ margin-top: 10px;
 
 }
 

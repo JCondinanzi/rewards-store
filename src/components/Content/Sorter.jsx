@@ -7,9 +7,9 @@ export default function Sorter() {
             <div className="sorter--separator"></div>
             <p className="sorter--title">Sort by:</p>
             <div className="sorter--button">
-                <Button />
-                <Button type="secondary" />
-                <Button type="secondary" />
+                <Button text="Most recent" />
+                <Button text="Lowest price" type="secondary" />
+                <Button text="Highest price" type="secondary" />
             </div>
         </div>
     );

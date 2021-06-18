@@ -9,8 +9,8 @@ export default function Button(props) {
     }
 
     return (
-        <button className={buttonClass}>
-            6000
+        <button onClick={props.onClick} className={buttonClass}>
+            {props.text}
             {props.showCoin ? (
                 <img className="button--coin" src={coin} alt="coin"></img>
             ) : null}
