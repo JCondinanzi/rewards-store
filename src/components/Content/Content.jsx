@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import Filters from './Filters';
 import Results from './Results';
+import Footer from './Footer';
 import './Content.css';
 
 export default function Content(props) {
     let [products, setProducts] = useState([]);
+    let [pageIndex, setPageIndex] = useState(0);
+
     let fetchProducts = () => {
         fetch('https://coding-challenge-api.aerolab.co/products', {
             headers: {
@@ -19,12 +22,53 @@ export default function Content(props) {
                 setProducts(data);
             });
     };
+    let sortProducts = (type) => {
+        let sortedProducts = products;
+
+        if (type === 'Lowest price') {
+            sortedProducts = products.sort((a, b) => {
+                if (a.cost < b.cost) {
+                    return -1;
+                }
+            });
+        } else if (type === 'Highest price') {
+            sortedProducts = products.sort((a, b) => {
+                if (a.cost > b.cost) {
+                    return -1;
+                }
+            });
+        }
+
+        setProducts([].concat(sortedProducts));
+    };
+
+    let changePage = (i) => {
+        setPageIndex(pageIndex + i);
+    };
+
+    const elementsPerPage = 16;
+    let visibleProducts = products.slice(
+        pageIndex * elementsPerPage,
+        pageIndex * elementsPerPage + elementsPerPage
+    );
 
     useEffect(fetchProducts, []);
     return (
         <div className="content">
-            <Filters productsAmount={products.length} />
-            <Results products={products} onRedeem={props.onRedeem} />
+            <Filters
+                pageIndex={pageIndex}
+                changePage={changePage}
+                sortProducts={sortProducts}
+                productsAmount={products.length}
+                visibleProductsAmount={visibleProducts.length}
+            />
+            <Results products={visibleProducts} onRedeem={props.onRedeem} />
+            <Footer
+                pageIndex={pageIndex}
+                productsAmount={products.length}
+                visibleProductsAmount={visibleProducts.length}
+                changePage={changePage}
+            />
         </div>
     );
 }

@@ -7,10 +7,18 @@ export default function Filters(props) {
     return (
         <div className="filters">
             <div className="filters--left">
-                <Label productsAmount={props.productsAmount} />
-                <Sorter />
+                <Label
+                    visibleProductsAmount={props.visibleProductsAmount}
+                    productsAmount={props.productsAmount}
+                    pageIndex={props.pageIndex}
+                />
+                <Sorter sortProducts={props.sortProducts} />
             </div>
-            <Pager />
+            <Pager
+                pageIndex={props.pageIndex}
+                changePage={props.changePage}
+                productsAmount={props.productsAmount}
+            />
         </div>
     );
 }
