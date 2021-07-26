@@ -12,8 +12,8 @@
     justify-content: space-between;
     width: 500px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-     border: solid 1px #E3E3E3; 
-    margin: 5px 0;
+     border: solid 0.5px #eeeeee; 
+    margin: 10px 0;
 }
 
 .history--list-item-img {

@@ -21,5 +21,19 @@
     font-size: 18px;
     font-weight: normal;
     padding-right: 20px;
+    margin-left:50px;
 
+}
+
+.header--products, .header--history {
+    text-decoration: none;
+    font-size: 18px;
+    color: #313131;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.header--products:hover, .header--history:hover {
+    color:#0ad2fa;
 }

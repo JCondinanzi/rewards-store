@@ -42,20 +42,24 @@ export default function Products(props) {
             />
             {showModal ? (
                 <div className="products--modal">
-                    <img
-                        className="products--modal--icon"
-                        src={iconHappy}
-                    ></img>
-                    <h1 className="products--modal--title">FELICITACIONES!</h1>
-                    <h3 className="products--modal--text">
-                        Tu compra se relizó con éxito
-                    </h3>
-                    <button
-                        className="products--modal--button"
-                        onClick={closeModal}
-                    >
-                        Volver a productos
-                    </button>
+                    <div className="products--modal--content">
+                        <img
+                            className="products--modal--icon"
+                            src={iconHappy}
+                        ></img>
+                        <h1 className="products--modal--title">
+                            ¡FELICITACIONES!
+                        </h1>
+                        <h3 className="products--modal--text">
+                            Tu compra se relizó con éxito
+                        </h3>
+                        <button
+                            className="products--modal--button"
+                            onClick={closeModal}
+                        >
+                            Volver a productos
+                        </button>
+                    </div>
                 </div>
             ) : null}
         </div>

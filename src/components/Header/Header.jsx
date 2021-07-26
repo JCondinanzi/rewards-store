@@ -8,8 +8,12 @@ export default function Header(props) {
         <div className="header">
             <img className="header--logo" src={logoAerolab} alt="Aerolab"></img>
             <div className="header--right">
-                <Link to="/">Products</Link>
-                <Link to="/history">History</Link>
+                <Link to="/" className="header--products">
+                    Products
+                </Link>
+                <Link to="/history" className="header--history">
+                    History
+                </Link>
                 <div>
                     <p className="header--user">{props.name}</p>
                 </div>
