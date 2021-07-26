@@ -2,6 +2,7 @@ import Banner from '../Banner/Banner';
 import Content from '../Content/Content';
 import './Products.css';
 import { useState } from 'react';
+import iconHappy from '../../images/icons/happy.svg';
 
 export default function Products(props) {
     let [showModal, setShowModal] = useState(false);
@@ -41,8 +42,20 @@ export default function Products(props) {
             />
             {showModal ? (
                 <div className="products--modal">
-                    <h1>exito</h1>
-                    <button onClick={closeModal}>Aceptar</button>
+                    <img
+                        className="products--modal--icon"
+                        src={iconHappy}
+                    ></img>
+                    <h1 className="products--modal--title">FELICITACIONES!</h1>
+                    <h3 className="products--modal--text">
+                        Tu compra se relizó con éxito
+                    </h3>
+                    <button
+                        className="products--modal--button"
+                        onClick={closeModal}
+                    >
+                        Volver a productos
+                    </button>
                 </div>
             ) : null}
         </div>
