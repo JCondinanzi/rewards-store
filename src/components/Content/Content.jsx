@@ -62,7 +62,11 @@ export default function Content(props) {
                 productsAmount={products.length}
                 visibleProductsAmount={visibleProducts.length}
             />
-            <Results products={visibleProducts} onRedeem={props.onRedeem} />
+            <Results
+                coinsAvailable={props.coinsAvailable}
+                products={visibleProducts}
+                onRedeem={props.onRedeem}
+            />
             <Footer
                 pageIndex={pageIndex}
                 productsAmount={products.length}

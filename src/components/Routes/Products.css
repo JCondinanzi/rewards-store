@@ -1,0 +1,20 @@
+.products {
+    position: relative;
+}
+
+.no-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.products--modal {
+    position: fixed;
+    background-color: #e3e3e3AF;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

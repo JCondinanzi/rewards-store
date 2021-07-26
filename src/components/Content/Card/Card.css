@@ -12,13 +12,25 @@
     justify-content: center;
     flex-direction: column; 
     padding: 20px 30px;
-    
+    position:relative    
 }
 
 .card--buy-blue {
+    position: absolute;
+    top: 20px;
+    right: 25px;
     width:42px;
-    align-self: flex-end;
     
+}
+
+.card--buy-black {
+    background-color: #616161;
+    opacity: 0.8;
+    font-size: 15px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor:default;
 }
 
 .card--separator {
@@ -87,6 +99,7 @@ color: #616161;
  font-size: 18px;
  align-self: center;
  margin-top: 10px;
+ cursor: pointer;
 
 }
 

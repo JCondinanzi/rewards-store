@@ -13,6 +13,7 @@ export default function Card(props) {
     let onClick = () => {
         props.onRedeem(props.id);
     };
+    const canBuy = props.coinsAvailable - props.cost >= 0;
     return (
         <div
             className="card"
@@ -20,22 +21,31 @@ export default function Card(props) {
             onMouseLeave={mouseHover}
         >
             <div className="card--content">
-                <img className="card--buy-blue" src={buyBlue}></img>
+                {canBuy ? (
+                    <img className="card--buy-blue" src={buyBlue}></img>
+                ) : (
+                    <Button showCoin className="card--buy-black">
+                        Te faltan {props.cost - props.coinsAvailable}{' '}
+                    </Button>
+                )}
+
                 <img className="card--img" src={props.img} alt="producto"></img>
                 <div className="card--separator"></div>
                 <div className="card--category">{props.category}</div>
                 <div className="card--name">{props.name}</div>
             </div>
-            <div className={'card--hover ' + (hover ? '' : 'hidden')}>
-                <img className="card--hover-buy-white" src={buyWhite}></img>
-                <div className="card--hover-content">
-                    <span className="card--hover-price">{props.cost}</span>
-                    <img className="card--hover-coin" src={coin}></img>
+            {canBuy ? (
+                <div className={'card--hover ' + (hover ? '' : 'hidden')}>
+                    <img className="card--hover-buy-white" src={buyWhite}></img>
+                    <div className="card--hover-content">
+                        <span className="card--hover-price">{props.cost}</span>
+                        <img className="card--hover-coin" src={coin}></img>
+                    </div>
+                    <button className="card--hover-button" onClick={onClick}>
+                        Redeem now
+                    </button>
                 </div>
-                <button className="card--hover-button" onClick={onClick}>
-                    Redeem now
-                </button>
-            </div>
+            ) : null}
         </div>
     );
 }

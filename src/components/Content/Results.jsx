@@ -7,6 +7,8 @@ export default function Results(props) {
             {props.products.map((item) => {
                 return (
                     <Card
+                        key={item.name}
+                        coinsAvailable={props.coinsAvailable}
                         img={item.img.url}
                         name={item.name}
                         category={item.category}

@@ -1,0 +1,25 @@
+.history--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.history--list-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+     border: solid 1px #E3E3E3; 
+    margin: 5px 0;
+}
+
+.history--list-item-img {
+    width: 150px;
+}
+
+.history--list-item-button {
+    cursor: default;
+}
