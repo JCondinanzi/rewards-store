@@ -57,20 +57,20 @@ function App() {
 
     return (
         <div className="app">
-            <Router>
+            <Router basename="/rewards-store">
                 <Header currentPoints={coinsAvailable} name={name} />
                 <Switch>
+                    <Route exact path="/">
+                        <Products
+                            onRedeem={onRedeem}
+                            coinsAvailable={coinsAvailable}
+                        />
+                    </Route>
                     <Route path="/history">
                         <History redeemHistory={history} />
                     </Route>
                     <Route path="/more-points">
                         <MorePoints addCoins={addCoins} />
-                    </Route>
-                    <Route path="/">
-                        <Products
-                            onRedeem={onRedeem}
-                            coinsAvailable={coinsAvailable}
-                        />
                     </Route>
                 </Switch>
             </Router>
