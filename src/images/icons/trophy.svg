@@ -1,0 +1,14 @@
+<svg id="trofeo" xmlns="http://www.w3.org/2000/svg" width="323.454" height="323.454" viewBox="0 0 323.454 323.454">
+  <path id="Trazado_17" data-name="Trazado 17" d="M31,175.859V306.221l28.429-28.429,28.429,28.429V209.258Zm0,0" transform="translate(-11.416 -64.761)" fill="#ff4b00"/>
+  <path id="Trazado_18" data-name="Trazado 18" d="M391,213.721v99.362l28.429-28.429,28.429,28.429V194.492Zm0,0" transform="translate(-143.987 -71.622)" fill="#cc1e0d"/>
+  <path id="Trazado_19" data-name="Trazado 19" d="M391,163.667V144.714a56.919,56.919,0,0,0,56.857-56.857v-37.9H400.476V31h66.965V87.857C467.441,129.659,432.8,163.667,391,163.667Zm0,0" transform="translate(-143.987 -11.416)" fill="#ff9f00"/>
+  <path id="Trazado_20" data-name="Trazado 20" d="M71.276,160.567C29.68,149.648,0,111.955,0,68.9V31H66.965V49.952H19.584V68.9a75.841,75.841,0,0,0,56.5,73.339Zm0,0" transform="translate(0 -11.416)" fill="#ffd400"/>
+  <path id="Trazado_21" data-name="Trazado 21" d="M226,301h37.9V415.346H226Zm0,0" transform="translate(-83.225 -110.844)" fill="#ffd400"/>
+  <path id="Trazado_22" data-name="Trazado 22" d="M256,301h18.952V415.346H256Zm0,0" transform="translate(-94.273 -110.844)" fill="#ff9f00"/>
+  <path id="Trazado_23" data-name="Trazado 23" d="M91,0V104.87a104.238,104.238,0,1,0,208.476,0V0Zm0,0" transform="translate(-33.511)" fill="#ffda44"/>
+  <path id="Trazado_24" data-name="Trazado 24" d="M360.238,0V104.87A104.42,104.42,0,0,1,256,209.108V0Zm0,0" transform="translate(-94.273)" fill="#fdbf00"/>
+  <path id="Trazado_25" data-name="Trazado 25" d="M280.269,99.364l-40.18-5.876-18-36.387-18,36.387L163.9,99.364l29.186,28.429-7.011,39.99,36.01-18.952,36.01,18.952-7.011-39.99Zm0,0" transform="translate(-60.356 -21.028)" fill="#fdbf00"/>
+  <path id="Trazado_26" data-name="Trazado 26" d="M285,127.793l7.011,39.99L256,148.831V57.1l18,36.387,40.18,5.876Zm0,0" transform="translate(-94.273 -21.028)" fill="#ff9f00"/>
+  <path id="Trazado_27" data-name="Trazado 27" d="M283.667,470.952V489.9H151V470.952A19.008,19.008,0,0,1,169.952,452h94.762A19.008,19.008,0,0,1,283.667,470.952Zm0,0" transform="translate(-55.606 -166.451)" fill="#ffda44"/>
+  <path id="Trazado_28" data-name="Trazado 28" d="M322.333,470.952V489.9H256V452h47.381A19.008,19.008,0,0,1,322.333,470.952Zm0,0" transform="translate(-94.273 -166.451)" fill="#fdbf00"/>
+</svg>

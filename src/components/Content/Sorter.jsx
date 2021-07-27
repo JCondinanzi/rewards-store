@@ -5,7 +5,13 @@ import './Sorter.css';
 export default function Sorter(props) {
     let [sortedBy, setSortedBy] = useState('');
     let changeSelected = (e) => {
-        setSortedBy(e.target.textContent);
+        const type = e.target.textContent;
+        if (type === sortedBy) {
+            setSortedBy('');
+        } else {
+            setSortedBy(e.target.textContent);
+        }
+
         props.sortProducts(e.target.textContent);
     };
     return (
@@ -16,12 +22,12 @@ export default function Sorter(props) {
                 <Button
                     onClick={changeSelected}
                     text="Lowest price"
-                    type={sortedBy != 'Lowest price' ? 'secondary' : ''}
+                    type={sortedBy !== 'Lowest price' ? 'secondary' : ''}
                 />
                 <Button
                     onClick={changeSelected}
                     text="Highest price"
-                    type={sortedBy != 'Highest price' ? 'secondary' : ''}
+                    type={sortedBy !== 'Highest price' ? 'secondary' : ''}
                 />
             </div>
         </div>

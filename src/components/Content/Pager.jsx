@@ -4,14 +4,14 @@ import arrowRight from '../../images/icons/arrow-right.svg';
 
 export default function Pager(props) {
     const onClickLeft = () => {
-        props.changePage(-1);
+        props.changePage.prev();
     };
     const onClickRight = () => {
-        props.changePage(1);
+        props.changePage.next();
     };
     return (
         <div>
-            {props.pageIndex <= 0 ? null : (
+            {props.pageIndex <= 1 ? null : (
                 <button onClick={onClickLeft} className="pager--arrow-left">
                     <img
                         className="pager--arrow-img"
@@ -21,7 +21,7 @@ export default function Pager(props) {
                 </button>
             )}
 
-            {(props.pageIndex + 1) * 16 < props.productsAmount ? (
+            {props.pageIndex * props.productsPerPage < props.productsAmount ? (
                 <button onClick={onClickRight} className="pager--arrow-right">
                     <img
                         className="pager--arrow-img"

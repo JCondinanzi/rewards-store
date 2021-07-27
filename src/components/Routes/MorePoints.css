@@ -1,0 +1,14 @@
+.more-points {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.more-points--title {
+margin-top: 20px;
+}
+
+.more-points--content {
+    display: flex;
+    margin: 30px 0;
+}

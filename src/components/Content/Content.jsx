@@ -3,10 +3,18 @@ import Filters from './Filters';
 import Results from './Results';
 import Footer from './Footer';
 import './Content.css';
+import usePagination from '../Hooks/usePagination';
 
 export default function Content(props) {
     let [products, setProducts] = useState([]);
-    let [pageIndex, setPageIndex] = useState(0);
+    let [sortedProducts, setSortedProducts] = useState([]);
+    let [sortedBy, setSortedBy] = useState('');
+
+    const itemsPerPage = 16;
+    const { next, prev, currentData, currentPage } = usePagination(
+        sortedBy ? sortedProducts : products,
+        itemsPerPage
+    );
 
     let fetchProducts = () => {
         fetch('https://coding-challenge-api.aerolab.co/products', {
@@ -23,55 +31,56 @@ export default function Content(props) {
             });
     };
     let sortProducts = (type) => {
-        let sortedProducts = products;
+        if (sortedBy === type) {
+            setSortedBy('');
+            return;
+        }
+
+        setSortedBy(type);
+        let sorted = [].concat(products);
 
         if (type === 'Lowest price') {
-            sortedProducts = products.sort((a, b) => {
+            sorted.sort((a, b) => {
                 if (a.cost < b.cost) {
                     return -1;
                 }
+                return 0;
             });
         } else if (type === 'Highest price') {
-            sortedProducts = products.sort((a, b) => {
+            sorted.sort((a, b) => {
                 if (a.cost > b.cost) {
                     return -1;
                 }
+                return 0;
             });
         }
 
-        setProducts([].concat(sortedProducts));
+        setSortedProducts(sorted);
     };
-
-    let changePage = (i) => {
-        setPageIndex(pageIndex + i);
-    };
-
-    const elementsPerPage = 16;
-    let visibleProducts = products.slice(
-        pageIndex * elementsPerPage,
-        pageIndex * elementsPerPage + elementsPerPage
-    );
 
     useEffect(fetchProducts, []);
+
     return (
         <div className="content">
             <Filters
-                pageIndex={pageIndex}
-                changePage={changePage}
+                pageIndex={currentPage}
+                changePage={{ next, prev }}
                 sortProducts={sortProducts}
                 productsAmount={products.length}
-                visibleProductsAmount={visibleProducts.length}
+                visibleProductsAmount={currentData().length}
+                productsPerPage={itemsPerPage}
             />
             <Results
                 coinsAvailable={props.coinsAvailable}
-                products={visibleProducts}
+                products={currentData()}
                 onRedeem={props.onRedeem}
             />
             <Footer
-                pageIndex={pageIndex}
+                pageIndex={currentPage}
                 productsAmount={products.length}
-                visibleProductsAmount={visibleProducts.length}
-                changePage={changePage}
+                visibleProductsAmount={currentData().length}
+                changePage={{ next, prev }}
+                productsPerPage={itemsPerPage}
             />
         </div>
     );

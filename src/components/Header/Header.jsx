@@ -14,14 +14,13 @@ export default function Header(props) {
                 <Link to="/history" className="header--history">
                     History
                 </Link>
+                <Link to="/more-points" className="header--more-points">
+                    More Points
+                </Link>
                 <div>
                     <p className="header--user">{props.name}</p>
                 </div>
-                <Button
-                    type="secondary"
-                    showCoin={true}
-                    onClick={props.addCoins}
-                >
+                <Button className="header--button" type="secondary" showCoin>
                     {props.currentPoints}
                 </Button>
             </div>

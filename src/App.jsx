@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Products from './components/Routes/Products';
 import History from './components/Routes/History';
+import MorePoints from './components/Routes/MorePoints';
 
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -11,8 +12,8 @@ function App() {
     let [name, setName] = useState('');
     let [history, setHistory] = useState([]);
 
-    let addCoins = () => {
-        let body = { amount: 1000 };
+    let addCoins = (points) => {
+        let body = { amount: points };
         fetch('https://coding-challenge-api.aerolab.co/user/points', {
             method: 'POST',
             headers: {
@@ -45,7 +46,7 @@ function App() {
             .then((data) => {
                 setCoinsAvailable(data.points);
                 setName(data.name);
-                setHistory(data.redeemHistory);
+                setHistory(data.redeemHistory.reverse());
             });
     };
     useEffect(getUserData, []);
@@ -57,14 +58,13 @@ function App() {
     return (
         <div className="app">
             <Router>
-                <Header
-                    addCoins={addCoins}
-                    currentPoints={coinsAvailable}
-                    name={name}
-                />
+                <Header currentPoints={coinsAvailable} name={name} />
                 <Switch>
                     <Route path="/history">
                         <History redeemHistory={history} />
+                    </Route>
+                    <Route path="/more-points">
+                        <MorePoints addCoins={addCoins} />
                     </Route>
                     <Route path="/">
                         <Products

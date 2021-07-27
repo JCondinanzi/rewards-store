@@ -9,9 +9,11 @@ export default function Footer(props) {
                 visibleProductsAmount={props.visibleProductsAmount}
                 productsAmount={props.productsAmount}
                 pageIndex={props.pageIndex}
+                productsPerPage={props.productsPerPage}
             />
             <Pager
                 pageIndex={props.pageIndex}
+                productsPerPage={props.productsPerPage}
                 changePage={props.changePage}
                 productsAmount={props.productsAmount}
             />

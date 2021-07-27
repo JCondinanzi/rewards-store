@@ -5,7 +5,7 @@ export default function Button(props) {
     let buttonClass = 'button ' + props.className;
 
     if (props.type === 'secondary') {
-        buttonClass = buttonClass + ' button--secondary';
+        buttonClass = 'button--secondary ' + buttonClass;
     }
 
     return (

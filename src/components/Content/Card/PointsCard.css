@@ -1,0 +1,24 @@
+.points-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    padding: 30px;
+    border: solid 0.5px #eeeeee; 
+
+}
+
+.points-card--img {
+    width: 70px;
+    height:60px;
+    margin-bottom: 30px;
+}
+
+.points-card--tier {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+

@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     list-style-type: none;
+    margin: 20px 0
 }
 
 .history--list-item {
@@ -22,4 +23,19 @@
 
 .history--list-item-button {
     cursor: default;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.history--footer {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
 }

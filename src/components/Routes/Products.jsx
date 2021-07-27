@@ -2,7 +2,7 @@ import Banner from '../Banner/Banner';
 import Content from '../Content/Content';
 import './Products.css';
 import { useState } from 'react';
-import iconHappy from '../../images/icons/happy.svg';
+import Modal from '../Modal';
 
 export default function Products(props) {
     let [showModal, setShowModal] = useState(false);
@@ -41,26 +41,9 @@ export default function Products(props) {
                 coinsAvailable={props.coinsAvailable}
             />
             {showModal ? (
-                <div className="products--modal">
-                    <div className="products--modal--content">
-                        <img
-                            className="products--modal--icon"
-                            src={iconHappy}
-                        ></img>
-                        <h1 className="products--modal--title">
-                            ¡FELICITACIONES!
-                        </h1>
-                        <h3 className="products--modal--text">
-                            Tu compra se relizó con éxito
-                        </h3>
-                        <button
-                            className="products--modal--button"
-                            onClick={closeModal}
-                        >
-                            Volver a productos
-                        </button>
-                    </div>
-                </div>
+                <Modal closeModal={closeModal}>
+                    Your purchase was successful!
+                </Modal>
             ) : null}
         </div>
     );
